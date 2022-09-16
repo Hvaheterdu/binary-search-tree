@@ -25,19 +25,14 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Recursively find BST height
-     * 
-     * @return BST height
+     * Recursively find BST height and return height
      */
     public int size() {
         return size(this.root);
     }
 
     /**
-     * Recursively find node with given value
-     * 
-     * @param value: value of node
-     * @return node with given value
+     * Recursively find node with given value and return value
      */
     public Node find(T value) {
         return findRec(this.root, value);
@@ -45,8 +40,6 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
 
     /**
      * Recursively add node to BST
-     * 
-     * @param value: value of node to add
      */
     public void add(T value) {
         if (root == null) {
@@ -59,8 +52,6 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
 
     /**
      * Add all nodes from list to BST
-     * 
-     * @param objects: list of nodes to add
      */
     public void addAll(ArrayList<T> objects) {
         for (T n : objects) {
@@ -70,28 +61,22 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
 
     /**
      * Recursively find out if node has been removed from BST
-     * 
-     * @param value: value of node
-     * @return {@code true} if node is removed
+     * and return true if node has been removed
      */
     public boolean remove(T value) {
         return removeRec(value, this.root) != null;
     }
 
     /**
-     * Recursively check if a node with a given value is in tree
-     * 
-     * @param value: value of node to find
-     * @return {@code true} if node with given value is in tree
+     * Recursively check if a node with a given value is in tree,
+     * return true if node is in tree
      */
     public boolean existsInTree(T value) {
         return findRec(this.root, value) != null;
     }
 
     /**
-     * Sort node values in BST in inorder
-     * 
-     * @return sorted array of BST node's values
+     * Sort node values in BST in inorder and return BST
      */
     public ArrayList<T> sortedArray() {
         ArrayList<T> sortedArr = new ArrayList<>();
@@ -112,30 +97,21 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Find node n's parent
-     * 
-     * @param n: node to find parent too
-     * @return node's parent
+     * Find and return node n's parent
      */
     public Node findParent(Node n) {
         return findParentHelper(this.root, n.data);
     }
 
     /**
-     * Find node n's grandparent
-     * 
-     * @param n: node to find grandparent too
-     * @return node's grandparent
+     * Find and return node n's grandparent
      */
     public Node findGrandparent(Node n) {
         return findGrandparentHelper(this.root, n.data);
     }
 
     /**
-     * Find closet element that is smaller than value
-     * 
-     * @param value: node to find nearest and smallest to
-     * @return closest and nearest value of node
+     * Find and return closest element that is smaller than value
      */
     public T findNearestSmallerThan(T value) {
         Node found = find(value);
@@ -155,11 +131,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Find all elements within a range
-     * 
-     * @param low:  lowest valued node
-     * @param high: highest valued node
-     * @return all elements between low and high as array
+     * Find and return all elements within a range
      */
     public ArrayList<T> findInRange(T low, T high) {
         ArrayList<T> nodesInRange = new ArrayList<>();
@@ -174,9 +146,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Print BST in inorder
-     * 
-     * @param root: start node
+     * Start at root and print BST in inorder
      */
     public void printBST(Node root) {
         if (root == null) {
@@ -190,10 +160,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     // -------------------- HELPER METHODS --------------------
 
     /**
-     * Recursive method to calculate size of BST
-     * 
-     * @param node: start node
-     * @return size of BST
+     * Recursive method that returns size of BST
      */
     private int size(Node node) {
         if (node == null) {
@@ -205,9 +172,6 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
 
     /**
      * Recursive helper method for add
-     * 
-     * @param data:    value of node
-     * @param current: current node we have reached
      */
     private void addRec(T data, Node current) {
         if (data.compareTo(current.data) < 0) {
@@ -228,11 +192,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Recursive method to find node with given value
-     * 
-     * @param value:   value of node
-     * @param current: current node we are at
-     * @return node with given value
+     * Recursive method that returns node with given value
      */
     private Node findRec(Node current, T value) {
         if (current == null) {
@@ -248,11 +208,8 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Recursive helper function for remove
-     * 
-     * @param value:   value of node to remove
-     * @param current: current node
-     * @return value of returned node
+     * Recursive helper function that returns removed
+     * nodes value
      */
     private Node removeRec(T value, Node current) {
         if (current == null) {
@@ -279,11 +236,8 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Helper function for removeRec. Find the smallest value from subtree where node is
-     * supposed to be removed from.
-     * 
-     * @param current: node with the smallest value
-     * @return smallest node
+     * Find the smallest value from subtree where node is
+     * and return its value
      */
     private T minValInBST(Node current) {
         T minVal = current.data;
@@ -295,11 +249,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Helper function for findParent
-     * 
-     * @param current: current root node
-     * @param val:     value of node we are finding parent to
-     * @return parent node
+     * Finds and returns parent nodes value
      */
     private Node findParentHelper(Node current, T val) {
         Node parent = null;
@@ -327,11 +277,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
     }
 
     /**
-     * Helper function for findGrandParent
-     * 
-     * @param current: current root node
-     * @param val:     value of node we are finding grandparent too
-     * @return grandparent node
+     * Find and return grandparent nodes value
      */
     private Node findGrandparentHelper(Node current, T val) {
         Node parent = null;
