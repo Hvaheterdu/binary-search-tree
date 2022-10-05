@@ -6,15 +6,15 @@ import java.util.Stack;
 public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
 
     // Root node
-    public Node root;
+    protected Node root;
 
     // Private node class for BST
     protected class Node {
-        public Node left;
-        public Node right;
-        public T data;
+        private Node left;
+        private Node right;
+        protected T data;
 
-        public Node(T data) {
+        protected Node(T data) {
             this.data = data;
         }
 
