@@ -17,7 +17,6 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
         protected Node(T data) {
             this.data = data;
         }
-
     }
 
     public BSTree() {
