@@ -5,10 +5,8 @@ import java.util.Stack;
 
 public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
 
-    // Root node
     protected Node root;
 
-    // Private node class for BST
     protected class Node {
         private Node left;
         private Node right;
