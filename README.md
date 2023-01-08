@@ -1,4 +1,4 @@
-# BST
+# Binary Search Tree
 
 My implementation of a Binary Search Tree in Java 17.
 
