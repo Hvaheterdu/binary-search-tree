@@ -57,46 +57,28 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-### Maven ###
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+### Windows ###
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
+# Dump file
+*.stackdump
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+# Folder config file
+[Dd]esktop.ini
 
-# Local History for Visual Studio Code
-.history/
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
-# Built Visual Studio Code Extensions
-*.vsix
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
-
-# Support for Project snippet scope
-.vscode/*.code-snippets
-
-# Ignore code-workspaces
-*.code-workspace
+# Windows shortcuts
+*.lnk
