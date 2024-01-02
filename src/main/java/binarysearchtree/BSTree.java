@@ -67,6 +67,7 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
                 current = node.right;
             }
         }
+
         return sortedArr;
     }
 
