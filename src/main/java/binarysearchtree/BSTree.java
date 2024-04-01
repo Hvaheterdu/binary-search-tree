@@ -113,9 +113,16 @@ public class BSTree<T extends Comparable<T>> implements BSTOper<T> {
         if (root == null) {
             return;
         }
-        printBST(root.left);
-        System.out.print(root.data + " ");
-        printBST(root.right);
+        
+        System.out.println(root.data);
+        
+        if (root.left != null) {
+            printBST(root.left);
+        }
+        
+        if (root.right != null) {
+            printBST(root.right);
+        }
     }
 
     // -------------------- HELPER METHODS --------------------
