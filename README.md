@@ -1,5 +1,5 @@
 # Binary Search Tree
 
-My implementation of a Binary Search Tree in Java 17.
+My implementation of a Binary search tree (BST) in Java 17.
 
-This is implemented with an interface so new functions can be added.
+The implementation uses an interface, so it is possible to add new functionality to the BST
